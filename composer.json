@@ -1,15 +1,23 @@
 {
-    "name": "hicksem/composer-package-template",
-    "description": "Composer Package Template repository",
+    "name": "wfu/wfu-countdown-test",
+    "description": "Countdown plugin (test)",
     "require": {
-        "php" : ">= 7.3"
+        "php" : ">= 7.4",
+        "wfu/wfu": "~3"
     },
     "require-dev": {
-        "phpunit/phpunit": "~5"
+      "phpunit/phpunit": "~9",
+      "phpunit/php-code-coverage":"~8"
     },
+    "repositories": [
+        {
+            "type": "git",
+            "url": "git@github.com:wakeforestuniversity/wfu-wfu.git"
+        }
+    ],
     "autoload": {
         "psr-4": {
-            "Example\\Template\\": "src/"
+            "Wfu\\Wp\\Plugins\\Countdown": "src/"
         }
     },
     "extra" : {

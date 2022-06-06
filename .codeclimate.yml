@@ -33,15 +33,28 @@ checks:
 plugins:
   phpcodesniffer:
     enabled: true
+    channel: beta
     config:
-      standard: "PSR1,PSR2"
+      standard: "PSR12"
+  sonar-php:
+    enabled: true
+    checks:
+      php:S1192:
+        enabled: false
+      php:S1763:
+        enabled: false
 exclude_patterns:
+  - "config/"
+  - "data/"
+  - "db/"
+  - "dist/"
+  - "features/"
   - "**/node_modules/"
+  - "script/"
   - "**/spec/"
   - "**/test/"
   - "**/tests/"
+  - "**/Tests/"
+  - "**/templates/"
   - "**/vendor/"
-  - "**/classes/"
-  - "**/config/"
-  - "**/views/"
 
